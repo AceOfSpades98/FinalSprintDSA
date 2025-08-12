@@ -1,5 +1,68 @@
 package com.keyin.binarytree;
 
+import jakarta.persistence.*;
+
+import java.time.LocalDate;
+
+@Entity
 public class TreeEntity {
-    
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public long id;
+
+    @Column(nullable = false, length = 1000)
+    public String input; // Preserves exactly what user types
+
+    @Transient
+    private TreeNode tree;
+
+    @Column(nullable = false)
+    public String treeJson; // stores serialized tre so that it can be displayed without rebuilding it
+
+    @Column(nullable = false)
+    public LocalDate createdAt;
+
+    public TreeEntity
+
+    // Getters and Setters
+    public Long getId() {
+        return id;
+    }
+
+    public String getInput() {
+        return input;
+    }
+
+    public TreeNode getTree() {
+        return tree;
+    }
+
+    public String getTreeJson() {
+        return treeJson;
+    }
+
+    public LocalDate getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setInput(String input) {
+        this.input = input;
+    }
+
+    public void setTree(TreeNode tree) {
+        this.tree = tree;
+    }
+
+    public void setTreeJson(String treeJson) {
+        this.treeJson = treeJson;
+    }
+
+    public void setCreatedAt(LocalDate createdAt) {
+        this.createdAt = createdAt;
+    }
 }
