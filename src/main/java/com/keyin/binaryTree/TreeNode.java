@@ -1,10 +1,10 @@
 package com.keyin.binaryTree;
 
 public class TreeNode {
-    private int value;
-    private TreeNode left;
-    private TreeNode right;
-    private int height;
+    public int value;
+    public TreeNode left;
+    public TreeNode right;
+    public int height;
 
     public TreeNode(int value) {
         this.value = value;
