@@ -25,7 +25,10 @@ public class TreeEntity {
 
     }
 
-    public TreeEntity(String input, String treeJson)
+    public TreeEntity(String input, String treeJson) {
+        this.input = input;
+        this.treeJson = treeJson;
+    }
 
     @PrePersist
     void onCreate() {
@@ -43,10 +46,6 @@ public class TreeEntity {
         return input;
     }
 
-    public TreeNode getTree() {
-        return tree;
-    }
-
     public String getTreeJson() {
         return treeJson;
     }
@@ -61,10 +60,6 @@ public class TreeEntity {
 
     public void setInput(String input) {
         this.input = input;
-    }
-
-    public void setTree(TreeNode tree) {
-        this.tree = tree;
     }
 
     public void setTreeJson(String treeJson) {
