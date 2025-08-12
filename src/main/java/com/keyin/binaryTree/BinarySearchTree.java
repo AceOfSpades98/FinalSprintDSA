@@ -1,7 +1,11 @@
 package com.keyin.binarytree;
 
-// Need to later integrate persistence to make this the service layer
+import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
+@Service
 public class BinarySearchTree {
 
     TreeNode root;
@@ -55,7 +59,7 @@ public class BinarySearchTree {
 
     public void remove(int value) {
         if (search(value)) {
-            removeHelper(root, value);
+            root = removeHelper(root, value);
         } else {
             System.out.println("Data could not be found.");
         }
@@ -97,5 +101,41 @@ public class BinarySearchTree {
             root = root.right;
         }
         return root.value;
+    }
+
+    public List<Integer> inOrder() {
+        List<Integer> out = new ArrayList<>();
+        inOrderHelper(root, out);
+        return out;
+    }
+    private void inOrderHelper(TreeNode n, List<Integer> out) {
+        if (n == null) return;
+        inOrderHelper(n.left, out);
+        out.add(n.value);
+        inOrderHelper(n.right, out);
+    }
+
+    public List<Integer> preOrder() {
+        List<Integer> out = new ArrayList<>();
+        pre(root, out);
+        return out;
+    }
+    private void pre(TreeNode n, List<Integer> out) {
+        if (n == null) return;
+        out.add(n.value);
+        pre(n.left, out);
+        pre(n.right, out);
+    }
+
+    public List<Integer> postOrder() {
+        List<Integer> out = new ArrayList<>();
+        post(root, out);
+        return out;
+    }
+    private void post(TreeNode n, List<Integer> out) {
+        if (n == null) return;
+        post(n.left, out);
+        post(n.right, out);
+        out.add(n.value);
     }
 }
