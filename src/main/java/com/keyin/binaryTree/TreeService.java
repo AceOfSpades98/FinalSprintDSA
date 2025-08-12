@@ -1,7 +1,7 @@
-package com.keyin.binaryTree;
+package com.keyin.binarytree;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.keyin.binaryTree.repository.TreeRepository;
+import com.keyin.binarytree.repository.TreeRepository;
 
 public class TreeService {
     

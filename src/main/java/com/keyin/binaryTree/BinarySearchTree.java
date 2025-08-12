@@ -1,6 +1,6 @@
-package com.keyin.binaryTree;
+package com.keyin.binarytree;
 
-
+// Need to later integrate persistence to make this the service layer
 
 public class BinarySearchTree {
 
