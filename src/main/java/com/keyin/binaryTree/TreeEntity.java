@@ -14,16 +14,25 @@ public class TreeEntity {
     @Column(nullable = false, length = 1000)
     public String input; // Preserves exactly what user types
 
-    @Transient
-    private TreeNode tree;
-
+    @Lob
     @Column(nullable = false)
     public String treeJson; // stores serialized tre so that it can be displayed without rebuilding it
 
     @Column(nullable = false)
     public LocalDate createdAt;
 
-    public TreeEntity
+    public TreeEntity() {
+
+    }
+
+    public TreeEntity(String input, String treeJson)
+
+    @PrePersist
+    void onCreate() {
+        if (createdAt == null) {
+            createdAt = LocalDate.now();
+        }
+    }
 
     // Getters and Setters
     public Long getId() {
