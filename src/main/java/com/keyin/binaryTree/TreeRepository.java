@@ -2,6 +2,6 @@ package com.keyin.binarytree;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public class TreeRepository extends JpaRepository<TreeEntity, Long> {
+public interface TreeRepository extends JpaRepository<TreeEntity, Long> {
     
 }
