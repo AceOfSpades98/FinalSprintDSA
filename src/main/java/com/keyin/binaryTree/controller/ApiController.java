@@ -1,42 +1,33 @@
 package com.keyin.binarytree.controller;
 
-import com.keyin.binarytree.repository.TreeRepository;
 import com.keyin.binarytree.model.TreeEntity;
+import com.keyin.binarytree.repository.TreeRepository;
 import com.keyin.binarytree.service.BinarySearchTree;
 import com.keyin.binarytree.service.TreeBuildService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
-public class UIController {
+@RestController
+@RequestMapping("/api")
+public class ApiController {
 
     private final TreeBuildService buildService;
     private final TreeRepository repository;
 
-    public UIController(TreeBuildService buildService, TreeRepository repository) {
+    public ApiController(TreeBuildService buildService, TreeRepository repository) {
         this.buildService = buildService;
         this.repository = repository;
     }
 
-    @GetMapping("/enter-numbers")
-    public String enterNumbers() {
-        return "enter-numbers";
-    }
-
     @GetMapping("/previous-trees")
-    public String previousTrees(Model model) {
-        List<TreeEntity> items = repository.findAll();
-        model.addAttribute("items", items);
-        return "previous-trees";
+    public List<TreeEntity> previousTrees() {
+        return repository.findAll();
     }
 
     @PostMapping(value = "/process-numbers", produces = "application/json")
-    @ResponseBody
     public ResponseEntity<String> processNumbers(@RequestParam("numbers") String numbers) {
         var parsed = buildService.parseNumbers(numbers);
         if (parsed.isEmpty()) {
