@@ -1,9 +1,6 @@
 # 📋 Development Plan
 
 ## Next Steps
-- Need SpringBoot entrypoint on Main
-- Configure database
-- TreeBuildService with parseNumbers, buildTree, toJson
 - GET /enter-numbers
 - POST /process-numbers
 - GET /previous-trees
