@@ -50,6 +50,4 @@ public class UIController {
         repository.save(new TreeEntity(numbers, json));
         return ResponseEntity.ok(json);
     }
-
-
 }
