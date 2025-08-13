@@ -10,6 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 public class UIController {
 
@@ -28,7 +30,9 @@ public class UIController {
 
     @GetMapping("/previous-trees")
     public String previousTrees(Model model) {
-
+        List<TreeEntity> items = repository.findAll();
+        model.addAttribute("items", items);
+        return "previous-trees";
     }
 
     @PostMapping(value = "/process-numbers", produces = "application/json")
