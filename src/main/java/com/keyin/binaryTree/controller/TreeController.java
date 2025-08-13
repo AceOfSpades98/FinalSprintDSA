@@ -1,5 +1,7 @@
-package com.keyin.binarytree;
+package com.keyin.binarytree.controller;
 
+import com.keyin.binarytree.service.BinarySearchTree;
+import com.keyin.binarytree.model.TreeNode;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -46,3 +48,4 @@ public class TreeController {
         }
     }
 }
+

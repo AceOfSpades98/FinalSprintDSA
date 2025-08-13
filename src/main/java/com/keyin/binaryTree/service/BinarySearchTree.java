@@ -1,11 +1,10 @@
-package com.keyin.binarytree;
+package com.keyin.binarytree.service;
 
-import org.springframework.stereotype.Service;
+import com.keyin.binarytree.model.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
 public class BinarySearchTree {
 
     TreeNode root;
