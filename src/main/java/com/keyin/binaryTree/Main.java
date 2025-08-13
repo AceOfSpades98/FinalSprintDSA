@@ -1,8 +1,11 @@
 package com.keyin.binarytree;
 
-public class Main {
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@SpringBootApplication
+public class Main {
     public static void main(String[] args) {
-        BinarySearchTree tree = new BinarySearchTree();;
+        SpringApplication.run(Main.class, args);
     }
 }

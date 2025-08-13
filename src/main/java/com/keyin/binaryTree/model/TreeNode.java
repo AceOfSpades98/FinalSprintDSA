@@ -1,4 +1,4 @@
-package com.keyin.binarytree;
+package com.keyin.binarytree.model;
 
 public class TreeNode {
     public int value;
