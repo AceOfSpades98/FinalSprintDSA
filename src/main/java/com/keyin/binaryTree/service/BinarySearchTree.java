@@ -7,7 +7,7 @@ import java.util.List;
 
 public class BinarySearchTree {
 
-    TreeNode root;
+    public TreeNode root;
 
     public void insert(TreeNode node) {
         root = insertHelper(root, node);

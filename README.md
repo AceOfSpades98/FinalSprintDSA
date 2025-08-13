@@ -1,10 +1,5 @@
 # 📋 Development Plan
 
-## Next Steps
-- GET /enter-numbers
-- POST /process-numbers
-- GET /previous-trees
-  
 ## Front End
 - Input for numbers
 - Submits (through POST method)
