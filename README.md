@@ -3,8 +3,6 @@
 A **Spring Boot** backend service for building, storing, and retrieving binary search trees.  
 This service exposes REST API endpoints that the frontend can consume.
 
----
-
 ## 🚀 Features
 
 - Accepts a string of integers and builds a **Binary Search Tree**.
@@ -13,8 +11,6 @@ This service exposes REST API endpoints that the frontend can consume.
 - Provides an endpoint to retrieve **previously saved trees**.
 - Uses **JPA** with an embedded H2 database.
 
----
-
 ## 🛠️ Technologies
 
 - **Java 17+**
@@ -22,8 +18,6 @@ This service exposes REST API endpoints that the frontend can consume.
 - **Spring Data JPA**
 - **H2 Database**
 - **Maven**
-
----
 
 ## 📦 Installation
 
