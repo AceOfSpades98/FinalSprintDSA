@@ -1,9 +1,32 @@
-# 📋 Development Plan
+# 🌳 Binary Tree Builder Backend
 
-## Front End
-- Input for numbers
-- Submits (through POST method)
-- Show previous links (through previous-trees method)
-- Area to display returned JSON
-- Previous trees page that lists every record
-- Add at least 3 tests
+A **Spring Boot** backend service for building, storing, and retrieving binary search trees.  
+This service exposes REST API endpoints that the frontend can consume.
+
+---
+
+## 🚀 Features
+
+- Accepts a string of integers and builds a **Binary Search Tree**.
+- Stores tree structure and original input in a database.
+- Returns JSON representation of the tree.
+- Provides an endpoint to retrieve **previously saved trees**.
+- Uses **JPA** with an embedded H2 database.
+
+---
+
+## 🛠️ Technologies
+
+- **Java 17+**
+- **Spring Boot**
+- **Spring Data JPA**
+- **H2 Database**
+- **Maven**
+
+---
+
+## 📦 Installation
+
+```bash
+mvn install
+mvn spring-boot:run
